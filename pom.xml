@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.xgi.proxy</groupId>
+    <artifactId>TestHTTPProxyServlet</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.3.RELEASE</version>
+    </parent>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <log4j.version>2.5</log4j.version>
+        <slf4j.verssion>1.7.24</slf4j.verssion>
+        <http-proxy-servlet.version>1.9</http-proxy-servlet.version>
+    </properties>
+
+    <dependencies>
+        <!-- Setup Spring Data JPA Repository support -->
+        <!-- spring-boot-starter-data-jpa ‘starters’ you will automatically get a dependency to tomcat-jdbc (The Tomcat JDBC Connection Pool) -->
+        <!-- The JDBC Connection Pool org.apache.tomcat.jdbc.pool is a replacement or an alternative to the Apache Commons DBCP connection pool. -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <!-- DB driver -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- Setup Spring MVC & REST, use Embedded Tomcat -->
+        <!-- Spring uses the Jackson JSON library to automatically marshal
+        instances into JSON -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- Testing starter -->
+        <!-- see https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-testing.html -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.mitre.dsmiley.httpproxy/smiley-http-proxy-servlet -->
+        <dependency>
+            <groupId>org.mitre.dsmiley.httpproxy</groupId>
+            <artifactId>smiley-http-proxy-servlet</artifactId>
+            <version>${http-proxy-servlet.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- The Spring Boot Maven plugin provides many convenient features -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
