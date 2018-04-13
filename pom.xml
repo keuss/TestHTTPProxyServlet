@@ -18,7 +18,7 @@
         <java.version>1.8</java.version>
         <log4j.version>2.5</log4j.version>
         <slf4j.verssion>1.7.24</slf4j.verssion>
-        <http-proxy-servlet.version>1.9</http-proxy-servlet.version>
+        <http-proxy-servlet.version>1.10</http-proxy-servlet.version>
     </properties>
 
     <dependencies>

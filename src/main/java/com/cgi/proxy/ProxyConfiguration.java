@@ -10,6 +10,7 @@ import org.springframework.core.env.Environment;
 
 @Configuration
 public class ProxyConfiguration implements EnvironmentAware {
+
     @Bean
     public ServletRegistrationBean servletRegistrationBean(){
         ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new ProxyServlet(), propertyResolver.getProperty("servlet_url"));
@@ -24,4 +25,5 @@ public class ProxyConfiguration implements EnvironmentAware {
     public void setEnvironment(Environment environment) {
         this.propertyResolver = new RelaxedPropertyResolver(environment, "proxy.cgi.");
     }
+
 }
