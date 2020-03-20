@@ -17,4 +17,11 @@ proxy:
         logging_enabled: true
 ``` 
 
+## Actuator
 
+ - See http://localhost:8888/trace
+
+## Alternatives
+
+ - Netflix's Zuul: https://github.com/Netflix/zuul
+ - Charon: https://github.com/mkopylec/charon-spring-boot-starter
