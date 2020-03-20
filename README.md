@@ -17,6 +17,9 @@ proxy:
         logging_enabled: true
 ``` 
 
+Example : http://localhost:8888/users/10?foo=bar -> http://localhost:8090/users/10?foo=bar
+
+
 ## Actuator
 
  - See http://localhost:8888/trace
