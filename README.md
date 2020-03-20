@@ -11,7 +11,7 @@ Gateway test for `/users/*` to `http://localhost:8090/users` with this applicati
 
 ```
 proxy:
-    cgi:
+    keuss:
         servlet_url: /users/*
         target_url: http://localhost:8090/users
         logging_enabled: true

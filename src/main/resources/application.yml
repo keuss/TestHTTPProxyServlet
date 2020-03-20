@@ -1,5 +1,5 @@
 proxy:
-    cgi:
+    keuss:
         servlet_url: /users/*
         target_url: http://localhost:8090/api/users
         logging_enabled: true

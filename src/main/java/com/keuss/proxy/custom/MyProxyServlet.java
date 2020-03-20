@@ -1,4 +1,4 @@
-package com.cgi.proxy.custom;
+package com.keuss.proxy.custom;
 
 import org.apache.http.HttpRequest;
 import org.apache.http.HttpResponse;

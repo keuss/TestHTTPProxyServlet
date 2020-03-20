@@ -1,6 +1,6 @@
-package com.cgi.proxy;
+package com.keuss.proxy;
 
-import com.cgi.proxy.custom.MyProxyServlet;
+import com.keuss.proxy.custom.MyProxyServlet;
 import org.mitre.dsmiley.httpproxy.ProxyServlet;
 import org.springframework.boot.bind.RelaxedPropertyResolver;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -27,7 +27,7 @@ public class ProxyConfiguration implements EnvironmentAware {
 
     @Override
     public void setEnvironment(Environment environment) {
-        this.propertyResolver = new RelaxedPropertyResolver(environment, "proxy.cgi.");
+        this.propertyResolver = new RelaxedPropertyResolver(environment, "proxy.keuss.");
     }
 
 }

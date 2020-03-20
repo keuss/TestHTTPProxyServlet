@@ -1,4 +1,4 @@
-package com.cgi.proxy.rest;
+package com.keuss.proxy.rest;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;

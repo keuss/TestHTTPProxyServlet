@@ -1,4 +1,4 @@
-package com.cgi.proxy.rest;
+package com.keuss.proxy.rest;
 
 
 public class Greeting {

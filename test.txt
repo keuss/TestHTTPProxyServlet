@@ -13,7 +13,7 @@ Proxy sur 8888 =>
 Conf
 
 proxy:
-    cgi:
+    keuss:
         servlet_url: /users/*
         target_url: http://localhost:8090/api/users
         logging_enabled: true
