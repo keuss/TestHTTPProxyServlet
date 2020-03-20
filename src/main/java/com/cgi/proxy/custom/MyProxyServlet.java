@@ -25,6 +25,7 @@ public class MyProxyServlet extends ProxyServlet {
 
         // see for other log : https://gist.github.com/sleroy/83bb5d3c2b55282b02d3b19ade650331
         // use Actuator (There's an endpoint mapped to /trace (SB1.x))
+        // Tuto : https://www.baeldung.com/spring-boot-actuators#boot-1x-actuator
 
         StringBuilder builderHeaders = new StringBuilder();
         builderHeaders.append("Headers Name - ");
