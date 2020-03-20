@@ -1,5 +1,6 @@
 package com.cgi.proxy;
 
+import com.cgi.proxy.custom.MyProxyServlet;
 import org.mitre.dsmiley.httpproxy.ProxyServlet;
 import org.springframework.boot.bind.RelaxedPropertyResolver;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -11,11 +12,14 @@ import org.springframework.core.env.Environment;
 @Configuration
 public class ProxyConfiguration implements EnvironmentAware {
 
+    // It may be the case that Spring Boot (or Spring MVC) is consuming the servlet input stream before the servlet gets it, which is a problem.
+    // if see https://github.com/mitre/HTTP-Proxy-Servlet/issues/83#issuecomment-307216795
+
     @Bean
-    public ServletRegistrationBean servletRegistrationBean(){
-        ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new ProxyServlet(), propertyResolver.getProperty("servlet_url"));
+    public ServletRegistrationBean servletRegistrationBean() {
+        ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new MyProxyServlet(), propertyResolver.getProperty("servlet_url"));
         servletRegistrationBean.addInitParameter("targetUri", propertyResolver.getProperty("target_url"));
-        servletRegistrationBean.addInitParameter(ProxyServlet.P_LOG, propertyResolver.getProperty("logging_enabled", "false"));
+        servletRegistrationBean.addInitParameter(ProxyServlet.P_LOG, propertyResolver.getProperty("logging_enabled", "true"));
         return servletRegistrationBean;
     }
 

@@ -3,3 +3,12 @@ proxy:
         servlet_url: /users/*
         target_url: http://localhost:8090/api/users
         logging_enabled: true
+endpoints:
+    trace:
+        sensitive: false
+spring:
+    jackson:
+        date-format: yyyy-MM-dd HH:mm:ss
+management:
+    trace:
+        include: parameters, request-headers, response-headers, cookies, errors, time-taken

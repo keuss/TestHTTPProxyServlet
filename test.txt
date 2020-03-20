@@ -27,7 +27,7 @@ Back sur 8090 =>
 
 Réponse sur JSON OK
 
-
+__________________________________________________________________
 Exposition d'un service REST en plus sur le proxy =>
 
 OK : http://localhost:8888/greeting?name=guillaume
