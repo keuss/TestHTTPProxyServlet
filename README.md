@@ -1,6 +1,6 @@
 # TestHTTPProxyServlet
 
-Test for the Smiley's HTTP Proxy Servlet : https://github.com/mitre/HTTP-Proxy-Servlet with **Spring Boot – Embedded servlet containers (tomcat)**
+Test for the Smiley's HTTP Proxy Servlet : https://github.com/mitre/HTTP-Proxy-Servlet with **Spring Boot 1 – Embedded servlet containers (tomcat)**
 
 ## Run
 
