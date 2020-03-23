@@ -2,6 +2,10 @@
 
 Test for the Smiley's HTTP Proxy Servlet : https://github.com/mitre/HTTP-Proxy-Servlet with **Spring Boot – Embedded servlet containers (tomcat)**
 
+ - With Spring Boot 1
+ - See MyProxyServlet.java for custom logs
+ - Also with some test REST service greeting (http://localhost:8888/greeting?name=foo)
+
 ## Run
 
  - `mvn clean package`
